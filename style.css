@@ -1,0 +1,579 @@
+/* css reset start */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* css reset end */
+
+
+
+
+/* fonts start */
+
+/* jura-300 - cyrillic_cyrillic-ext */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* jura-regular - cyrillic_cyrillic-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* jura-500 - cyrillic_cyrillic-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* jura-600 - cyrillic_cyrillic-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* jura-700 - cyrillic_cyrillic-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+/* kristi-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Kristi';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/kristi-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-family: 'Tsarevich';
+    src: url('fonts/Tsarevich-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Tsarevich';
+    src: url('fonts/Tsarevich-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* fonts end */
+
+
+
+
+/* переменные start */
+
+:root {
+    --font-family: "Jura", sans-serif;
+    --second-family: "Tsarevich", sans-serif;
+    --third-family: "Kristi", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+.wrapper {
+    max-width: 1292px;
+    margin: 0 auto;
+}
+
+/* переменные end */
+
+
+
+
+/* HEADER START */
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 1038px;
+    margin: 0 auto;
+    padding: 21px 0;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 21px;
+}
+
+header nav ul li {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: #fff;
+}
+
+header nav ul li a {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 88%;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+/* HEADER END */
+
+
+
+
+/* FOOTER START */
+
+.footer-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 43px 0;
+}
+
+.footer-cont ul > :not(:last-child) {
+    margin-bottom: 22px;
+}
+
+.footer-cont a {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #0e111e;
+    text-decoration: none;
+}
+
+/* FOOTER END */
+
+
+
+
+/* ART SCHOOL PAGE START */
+
+
+/* hero start */
+
+.hero {
+    min-height: 853px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 210px;
+    text-align: center;
+    color: #000;
+    line-height: 70%;
+}
+
+.hero h1 span {
+    font-size: 128px;
+}
+
+.fly {
+    background: #0e111e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: hidden; 
+    padding: 33px 0;
+}
+
+
+.fly p {
+    display: inline-block;
+    min-width: 100%;
+    animation: marquee 20s linear infinite;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.fly p span {
+    font-weight: 600;
+    font-size: 48px;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.hero-desc {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 88%;
+    text-align: center;
+    color: #000;
+}
+
+/* hero end */
+
+
+/* accordion start */
+
+.accordion {
+    padding-top: 853px;
+    margin-top: 24px;
+}
+
+.accordion-top {
+    border-radius: 27px;
+    padding: 41px 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.accordion-top-active {
+    border-radius: 27px 27px 0 0;
+}
+
+.accordion-top h3 {
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    color: #fff;
+    max-width: 900px;
+    margin-bottom: 44px;
+}
+
+.accordion-top p {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 44px;
+}
+
+.accordion-top button {
+    border: none;
+    background: transparent;
+}
+
+.accordion-bottom {
+    padding: 43px 54px;
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 27px;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.accordion-bottom-active {
+    border-top: none;
+    border-radius: 0 0 27px 27px;
+}
+
+.accordion-bottom > :first-child,
+.accordion-bottom > :last-child {
+    flex: 1;
+}
+
+.accordion-bottom h6 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.accordion-bottom p,
+.accordion-bottom a {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.accordion-bottom p {
+    margin-bottom: 30px;
+}
+
+.accordion-bottom button {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.accordion-cont > :not(:last-child) {
+    margin-bottom: 45px;
+}
+
+.button-acc {
+    transition: transform 0.3s ease;
+}
+
+/* accordion end */
+
+
+/* ART SCHOOL PAGE END */
+
+
+
+/* MUSEUMS START  */
+
+.bear {
+    position: absolute;
+    left: 150px;
+    bottom: 75px;
+}
+
+
+.tab-container {
+    overflow: hidden; /* Чтобы убрать возможные выступы */
+    margin-top: 853px;
+}
+
+.tab-buttons {
+    display: flex;
+    border-radius: 10px;
+    padding: 12px;
+    background: #4b1300;
+    margin-top: 24px;
+    width: 100%;
+    max-width: 591px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tab-buttons-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-button {
+   
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 88%;
+    text-align: center;
+    color: #4b1300;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: #fff;
+}
+
+.tab-button.active {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.tab-content {
+    padding: 15px;
+}
+
+.tab-panel {
+    display: none; /* Скрываем все панели по умолчанию */
+}
+
+.tab-panel.active {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 79px;
+}
+
+
+
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d; /* Важно для 3D трансформаций */
+    height: 555px;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg); /* Переворачиваем заднюю сторону изначально */
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 69px 24px 37px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-front {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-front h6 {
+    color: #543000;
+}
+
+.card-back h6 {
+    color: #000;
+}
+
+.card-front h6,
+.card-back h6 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 219%;
+}
+
+.card-front p{
+    font-weight: 600;
+    font-size: 20px;
+    color: #543000;
+    max-width: 205px;
+    margin-bottom: 12px;
+}
+
+.card-front button {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #543000;
+    border: 1px solid #543000;
+    border-radius: 10px;
+    padding: 8px 56px;
+    background: transparent;
+}
+
+.card-back p {
+    font-weight: 400;
+    font-size: 28px;
+    color: #000;
+}
+
+.card-back h5 {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card-site {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 12px;
+    background: #fff;
+}
+
+.back-button {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+/* MUSEUMS END  */
