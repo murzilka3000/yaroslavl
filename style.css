@@ -733,4 +733,162 @@ header nav ul li a {
     gap: 35px;
 }
 
+.cont-1 {
+    display: flex;
+    gap: 24px;
+}
+
+.cont-1 > :first-child {
+    flex: 3.7;
+}
+
+.cont-1 > :last-child {
+    flex: 1;
+}
+
+.cont-1-2 {
+    background: url('/images/bg-1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 27px;
+    position: relative;
+    overflow: hidden;
+    padding: 63px 30px 23px 30px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cont-1-2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+.cont-1-2 h6 {
+    font-weight: 700;
+    font-size: 52px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.cont-1-2 p {
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 37px;
+}
+
+.cont-1-1-1 {
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 27px;
+    overflow: hidden;
+    min-height: 261px;
+}
+
+.cont-1-1-1 > :first-child {
+    background: #1481EA;
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.cont-1-1-1 > :last-child {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    justify-content: center;
+    flex: 3;
+}
+
+.cont-1-1-1 > :last-child h6 {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.cont-1-1-1 > :last-child p {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+}
+
+.cont-1-1-1 > :first-child img {
+    position: absolute;
+}
+
+.cont-1-1-2-2 {
+    display: flex;
+    gap: 24px;
+}
+
+.cont-1-1-2-2-1{
+    flex: 1;
+    background: #1481ea;
+    border-radius: 27px;
+    padding: 16px;
+}
+
+.cont-1-1-2-2-2 {
+    flex: 2;
+    background: url('/images/bg-2.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 27px;
+}
+
+.cont-1-1-2-2-1 > :first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 13px;
+}
+
+.cont-1-1-2-2-1 p {
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+}
+
+.cont-1-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cont-1-1-2-2-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 51px;
+}
+
+.cont-1-1-2-2-2 h6 {
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: #fff;
+}
+
+.cont-1-1-2-2-2 p {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
 /* EVENTS END */
