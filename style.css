@@ -66,7 +66,7 @@ button {
     font-family: 'Jura';
     font-style: normal;
     font-weight: 300;
-    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/jura-v31-cyrillic_cyrillic-ext-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* jura-regular - cyrillic_cyrillic-ext */
   @font-face {
@@ -74,7 +74,7 @@ button {
     font-family: 'Jura';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/jura-v31-cyrillic_cyrillic-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* jura-500 - cyrillic_cyrillic-ext */
   @font-face {
@@ -82,7 +82,7 @@ button {
     font-family: 'Jura';
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/jura-v31-cyrillic_cyrillic-ext-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* jura-600 - cyrillic_cyrillic-ext */
   @font-face {
@@ -90,7 +90,7 @@ button {
     font-family: 'Jura';
     font-style: normal;
     font-weight: 600;
-    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/jura-v31-cyrillic_cyrillic-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* jura-700 - cyrillic_cyrillic-ext */
   @font-face {
@@ -98,7 +98,7 @@ button {
     font-family: 'Jura';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/jura-v31-cyrillic_cyrillic-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/jura-v31-cyrillic_cyrillic-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
 /* kristi-regular - latin */
@@ -107,7 +107,7 @@ button {
     font-family: 'Kristi';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/kristi-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/kristi-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @font-face {
@@ -863,7 +863,8 @@ header nav ul li a {
     color: #fff;
 }
 
-.cont-1-1 {
+.cont-1-1,
+.cont-1-1-2 {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -890,5 +891,112 @@ header nav ul li a {
     text-align: center;
     color: #fff;
 }
+
+.cont-1-1-2-1 {
+    display: flex;
+    gap: 24px;
+}
+
+.cont-1-1-2-1-1 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cont-1-1-2-1-2 {
+    flex: 1;
+    background: url('/images/bg-10.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 27px;
+    padding: 38px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cont-1-1-2-1-2 h6 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 117%;
+    color: #fff;
+}
+
+.cont-1-1-2-1-2 p {
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    margin-top: 18px;
+}
+
+.cont-1-1-2-1-1-2 {
+    background: url('/images/bg-12.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 27px;
+    gap: 10px;
+    flex: 1;
+    min-height: 261px;
+}
+
+.cont-1-1-2-1-1-2 h6 {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.cont-1-1-2-1-1-2 p {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.cont-1-1-2-1-1-1 {
+    display: flex;
+    gap: 24px;
+    min-height: 261px;
+}
+
+.cont-1-1-2-1-1-1-1 {
+    border: 1px solid #000;
+    border-radius: 27px;
+    padding: 22px;
+    flex: 1;
+}
+
+.cont-1-1-2-1-1-1-2 {
+    background: url('/images/bg-11.png');
+    flex: 1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 27px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cont-1-1-2-1-1-1-2 h6{
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+}
+
+.cont-1-1-2-1-1-1-2 img {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
 
 /* EVENTS END */
