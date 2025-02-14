@@ -747,7 +747,7 @@ header nav ul li a {
 }
 
 .cont-1-2 {
-    background: url('/images/bg-1.png');
+    background: url('./images/bg-1.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -843,7 +843,7 @@ header nav ul li a {
 
 .cont-1-1-2-2-2 {
     flex: 2;
-    background: url('/images/bg-2.png');
+    background: url('./images/bg-2.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
