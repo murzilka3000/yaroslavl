@@ -1050,13 +1050,13 @@ header nav ul li a {
 
 .control-culture {
     margin-top: 853px;
+    padding-top: 140px;
+    padding-bottom: 90px;
 }
 
 .control-culture-cont {
     display: flex;
     gap: 23px;
-    padding-top: 140px;
-    margin-bottom: 90px;
 }
 
 .control-culture-cont > :last-child {
@@ -1309,31 +1309,39 @@ header nav ul li a {
   .block-item {
     margin-bottom: 10px;
     border-radius: 12px; /* Углы в стиле image */
-    border: 1px solid #ddd; /* Рамка, если нужно */
+    border: 1px solid #0e111e; /* Рамка, если нужно */
     overflow: hidden; /* Чтобы border-radius работал */
     background-color: #fff; /* Задний фон */
   }
   
   .block-header {
-    padding: 15px;
-    background-color: #f9f9f9;
+    padding: 10px;
+    background-color: #fff;
     cursor: pointer; /* Рука при наведении */
-    font-weight: bold; /* Жирный текст заголовка */
-    border-bottom: 1px solid #eee; /* Разделитель заголовка и контента */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 88%;
+    color: #0e111e;
   }
   
   .block-content {
     padding: 15px;
-    display: none; /* Скрываем контент по умолчанию */
+    display: none;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 102%;
+    color: #0e111e;
   }
   
   .block-sign {
     margin-right: 10px;
-    font-size: 20px; /* размер +- */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 88%;
+    color: #0e111e;
+    
   }
   
   /* Стиль для открытого аккордеона */
@@ -1341,4 +1349,145 @@ header nav ul li a {
     display: block; /* Показываем контент */
   }
 
+  .accordeon-two {
+    margin-bottom: 90px;
+  }
+
 /* control-culture end */
+
+
+
+
+
+/* leisure start */
+
+
+.leisure-hero-title {
+    font-size: 150px!important;
+    line-height: 90%!important;
+    padding-top: 170px;
+}
+
+
+.tab-button-yellow {
+    color: #fc3;
+}
+
+.leisure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+.leisure-grid-item {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 32px 52px;
+}
+
+.leisure-grid-item > :first-child {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.leisure-grid-item h6 {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 127%;
+    color: #000;
+}
+
+.leisure-grid-item p {
+    font-weight: 400;
+    font-size: 48px;
+    color: #000;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.leisure-grid-item button {
+    font-family: var(--font-family);
+    border-radius: 10px;
+    padding: 10px;
+    background: #000;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    width: 100%;
+}
+
+/* leisure end */
+
+
+
+
+
+/* info start */
+
+.info-hero-title {
+    font-size: 300px!important;
+    line-height: 50%!important;
+    color: #fff!important;
+    padding-top: 100px!important;
+}
+
+.info-hero-text {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 88%;
+    text-align: center;
+    color: #fff;
+    max-width: 1000px;
+}
+
+.flex-info {
+    flex-direction: column;
+    justify-content: space-between!important;
+    height: auto;
+}
+
+.flex-info-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #1481ea!important;
+}
+
+.flex-info-cont > :first-child {
+    flex: 1;
+}
+
+.flex-info-cont > :last-child {
+    flex: 4;
+}
+
+.info-1 {
+    background: #fc3!important;
+}
+
+.info-2 {
+    background: #0e111e!important;
+}
+
+.dop-culture {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+}
+
+.dop-culture > :first-child {
+    flex: 1;
+    background: #1481ea!important;
+}
+
+.dop-culture > :last-child {
+    flex: 3;
+}
+
+.map-info {
+    margin-top: 0!important;
+}
+
+/* info end */
