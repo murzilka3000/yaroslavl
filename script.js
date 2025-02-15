@@ -109,6 +109,53 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 3.5,
       spaceBetween: 20,
       centeredSlides: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
   }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  function resizeMap() {
+      const mapContainer = document.querySelector('.map-container');
+      const iframe = document.querySelector('.map-container iframe');
+
+      if (mapContainer && iframe) {
+          const width = mapContainer.offsetWidth;
+          const height = width / 2;  // Соотношение 1:2
+          iframe.style.height = height + 'px';
+      }
+  }
+
+  // Вызываем resizeMap при загрузке страницы
+  resizeMap();
+
+  // Вызываем resizeMap при изменении размера окна
+  window.addEventListener('resize', resizeMap);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const blockHeaders = document.querySelectorAll(".block-header");
+
+  blockHeaders.forEach(header => {
+    header.addEventListener("click", function() {
+      const item = this.parentNode;
+      item.classList.toggle("active");
+
+        // Получаем элемент с иконкой + или -
+        const toggleIcon = this.querySelector('.block-sign');
+
+        if (item.classList.contains('active')) {
+            toggleIcon.textContent = '-'; // Заменяем на '-' при открытии
+        } else {
+            toggleIcon.textContent = '+'; // Заменяем на '+' при закрытии
+        }
+    });
+  });
 });
