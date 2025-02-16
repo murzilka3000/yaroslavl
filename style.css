@@ -913,7 +913,7 @@ header nav ul li a {
 
 .cont-1-1-2-1-2 {
     flex: 1;
-    background: url('/images/bg-10.png');
+    background: url('./images/bg-10.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -939,7 +939,7 @@ header nav ul li a {
 }
 
 .cont-1-1-2-1-1-2 {
-    background: url('/images/bg-12.png');
+    background: url('./images/bg-12.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -980,7 +980,7 @@ header nav ul li a {
 }
 
 .cont-1-1-2-1-1-1-2 {
-    background: url('/images/bg-11.png');
+    background: url('./images/bg-11.png');
     flex: 1;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1626,7 +1626,7 @@ header nav ul li a {
     .print::before {
     animation-duration: .5s;
     animation-name: fadein;
-    background: url('/images/lapka.svg') no-repeat;
+    background: url('./images/lapka.svg') no-repeat;
     background-size: contain;
     content: '';
     display: block;
@@ -1669,7 +1669,7 @@ header nav ul li a {
 }
 
 .home-hero-cont {
-    background: url('/images/home-bg.png');
+    background: url('./images/home-bg.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left top;
