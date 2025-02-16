@@ -1491,3 +1491,162 @@ header nav ul li a {
 }
 
 /* info end */
+
+
+
+
+/* library start */
+
+
+.library-hero-title {
+    margin-bottom: 50px;
+    padding-top: 200px!important;
+}
+
+
+.swiper-container-lib {
+    margin-top: 48px;
+}
+
+.swiper-container-lib
+.swiper-wrapper
+.swiper-slide
+ {
+    padding: 55px 12px 24px 12px;
+    box-shadow: 10px 17px 10px 0 rgba(0, 0, 0, 0.25);
+    min-height: 617px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mt-12 {
+    padding-top: 853px!important;
+}
+
+.swiper-container-lib
+.swiper-wrapper
+.swiper-slide h6 {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.swiper-container-lib
+.swiper-wrapper
+.swiper-slide p {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.lib-flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lib-flex {
+    display: flex;
+}
+
+.swiper-container-lib
+.swiper-wrapper
+.swiper-slide button {
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.swiper-container-lib {
+    position: relative;
+}
+
+/* library end */
+
+
+
+
+
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.paw-print {
+    position: absolute;
+    width: 25px; /* Размер отпечатка */
+    height: 25px;
+    background: url('./images/bear.svg') no-repeat center center; /* Изображение отпечатка лапы */
+    background-size: contain;
+    pointer-events: none;
+    animation: fadeout 1s forwards;
+    z-index: 9999;
+}
+
+  body {
+    margin: 0;
+    overflow: hidden; 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .print {
+    animation-duration: 8s;
+    animation-name: blurout;
+    animation-fill-mode: forwards;
+    height: 40px;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 40px;
+    z-index: 9999;
+    }
+    .print::before {
+    animation-duration: .5s;
+    animation-name: fadein;
+    background: url('/images/lapka.svg') no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 40px;
+    width: 40px;
+    }
+     
+    @keyframes fadein {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+    }
+    @keyframes blurout {
+    from {
+    filter: blur(0px);
+    }
+    to {
+    filter: blur(5px);
+    }
+    }
