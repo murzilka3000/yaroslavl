@@ -165,7 +165,6 @@ header {
     right: 0;
     left: 0;
     z-index: 2;
-    max-width: 1038px;
     margin: 0 auto;
     padding: 21px 0;
 }
@@ -173,7 +172,7 @@ header {
 header nav ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 21px;
 }
 
@@ -381,7 +380,7 @@ header nav ul li a {
 }
 
 .accordion-bottom p {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .accordion-bottom button {
@@ -393,6 +392,8 @@ header nav ul li a {
     border-radius: 10px;
     padding: 10px;
     background-color: #fff;
+    position: relative;
+    z-index: 10000000000000;
 }
 
 .accordion-cont > :not(:last-child) {
@@ -401,9 +402,16 @@ header nav ul li a {
 
 .button-acc {
     transition: transform 0.3s ease;
+    position: relative;
+    z-index: 100000000000;
 }
 
 /* accordion end */
+
+
+.school {
+    padding-top: 150px!important;
+}
 
 
 /* ART SCHOOL PAGE END */
@@ -415,7 +423,8 @@ header nav ul li a {
 .bear {
     position: absolute;
     left: 150px;
-    bottom: 75px;
+    bottom: 80px;
+    z-index: 3;
 }
 
 
@@ -600,11 +609,34 @@ header nav ul li a {
     color: #000;
 }
 
+.open-site {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 5px 12px;
+    background: transparent;
+}
+
 /* MUSEUMS END  */
 
 
 
 /* EVENTS START */
+
+.events-title {
+    font-size: 300px!important;
+    line-height: 50%!important;
+    padding-top: 150px!important;
+}
+
+.events-text {
+    font-size: 150px!important;
+    
+}
 
 .bear2 {
     position: absolute;
@@ -1238,6 +1270,7 @@ header nav ul li a {
 
 .swiper-button-next, .swiper-button-prev {
     top: 50%!important;
+    z-index: 10000000000000000!important;
 }
 
 .swiper-button-next {
@@ -1666,13 +1699,14 @@ header nav ul li a {
 
 .home-hero {
     padding: 59px 0;
-}
-
-.home-hero-cont {
     background: url('./images/home-bg.png');
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left top;
+    background-size: 43%;
+    background-position: 50px 10px;
+  }
+
+.home-hero-cont {
+    
     border-radius: 10px;
     padding: 174px 30px 160px 85px;
     border: 2px solid #fff;
