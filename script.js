@@ -998,3 +998,63 @@ const runtime = (delta) => {
 }
 
 requestAnimationFrame(runtime);
+
+
+
+
+
+
+
+
+function updateTime() {
+  const now = new Date();
+  const hours = now.getUTCHours() + 3; // MSK time zone
+  const minutes = now.getUTCMinutes();
+
+  // Format time as HH:MM
+  const formattedHours = String(hours).padStart(2, '0');
+  const formattedMinutes = String(minutes).padStart(2, '0');
+
+  // Update the text in the button
+  document.getElementById("currentTime").innerText = `${formattedHours}:${formattedMinutes}`;
+}
+
+// Update time every minute
+setInterval(updateTime, 60000);
+
+// Initial update
+updateTime();
+
+
+
+
+
+
+const lapkiContainers = document.querySelectorAll('.home-lapki-cont > div');
+  let lastScrollTop = 0; // Переменная для хранения предыдущей позиции прокрутки
+
+  function checkVisibility() {
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop; // Текущая позиция прокрутки
+    const isScrollingDown = currentScrollTop > lastScrollTop; // Определяем направление прокрутки
+
+    lapkiContainers.forEach((container, index) => {
+      const rect = container.getBoundingClientRect();
+
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        const delay = index * 200;
+
+        setTimeout(() => {
+          container.style.opacity = 1;
+        }, delay);
+      } else {
+        if (!isScrollingDown) { // Если скроллим вверх, делаем прозрачным
+          container.style.opacity = 0;
+        }
+      }
+    });
+
+    lastScrollTop = currentScrollTop; // Обновляем предыдущую позицию прокрутки
+  }
+
+  window.addEventListener('load', checkVisibility);
+  window.addEventListener('scroll', checkVisibility);
