@@ -1112,3 +1112,43 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+
+ 
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Этот код будет выполнен только после загрузки DOM
+  const buttons = document.querySelectorAll('.open-events-popup');
+
+  // Получаем сам попап
+  const popup = document.getElementById('events-popup2');
+
+  // Получаем кнопку закрытия (крестик)
+  const closeButton = document.querySelector('.close-button2');
+
+  // Функция для открытия попапа
+  function openPopup() {
+    popup.style.display = 'block';
+  }
+
+  // Функция для закрытия попапа
+  function closePopup() {
+    popup.style.display = 'none';
+  }
+
+  // Добавляем обработчик клика для каждой кнопки
+  buttons.forEach(button => {
+    button.addEventListener('click', openPopup);
+  });
+
+  // Добавляем обработчик клика для кнопки закрытия
+  closeButton.addEventListener('click', closePopup);
+
+  // Закрытие попапа при клике вне попапа (необязательно, но удобно)
+  window.addEventListener('click', function(event) {
+    if (event.target === popup) {
+      closePopup();
+    }
+  });
+});
