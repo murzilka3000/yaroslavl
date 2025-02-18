@@ -1075,24 +1075,49 @@ const lapkiContainers = document.querySelectorAll('.home-lapki-cont > div');
   document.addEventListener("DOMContentLoaded", () => {
     const popup = document.getElementById("popup"); // Один попап
     const triggers = document.querySelectorAll(".popup-info"); // Все кнопки-триггеры
-    const close = popup.querySelector(".close"); // Кнопка закрытия
-
-    triggers.forEach(trigger => {
+    const close = popup ? popup.querySelector(".close") : null; // Кнопка закрытия
+  
+    if (triggers.length > 0) {
+      triggers.forEach(trigger => {
         trigger.addEventListener("click", () => {
+          if (popup) {
             popup.style.display = "flex"; // Открытие попапа
+          } else {
+            console.warn("Popup с id 'popup' не найден.");
+          }
         });
-    });
-
-    close.addEventListener("click", () => {
-        popup.style.display = "none"; // Закрытие попапа
-    });
-
-    popup.addEventListener("click", (event) => {
-        if (event.target === popup) {
-            popup.style.display = "none"; // Закрытие при клике вне контента
+      });
+    } else {
+      console.warn("Кнопки-триггеры с классом 'popup-info' не найдены.");
+    }
+  
+    if (close) {
+      close.addEventListener("click", () => {
+        if (popup) {
+          popup.style.display = "none"; // Закрытие попапа
+        } else {
+          console.warn("Popup с id 'popup' не найден.");
         }
-    });
-});
+      });
+    } else {
+      if (popup) {
+        console.warn("Кнопка закрытия с классом 'close' внутри popup не найдена.");
+      } else {
+        console.warn("Popup с id 'popup' не найден.");
+      }
+    }
+  
+  
+    if (popup) {
+      popup.addEventListener("click", (event) => {
+        if (event.target === popup) {
+          popup.style.display = "none"; // Закрытие при клике вне контента
+        }
+      });
+    } else {
+      console.warn("Popup с id 'popup' не найден.");
+    }
+  });
 
 
 
@@ -1101,24 +1126,33 @@ const lapkiContainers = document.querySelectorAll('.home-lapki-cont > div');
 var acc = document.getElementsByClassName("accordion12");
 var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active12");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
+if (acc.length > 0) {
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active12");
+      var panel = this.nextElementSibling;
+      if (panel) { // Проверяем, существует ли следующий элемент
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      } else {
+        console.warn("Нет следующего элемента за аккордеоном.");
+      }
+    });
+  }
+} else {
+  console.warn("Элементы с классом 'accordion12' не найдены.");
 }
-
 
 
  
 
 document.addEventListener('DOMContentLoaded', function() {
   // Этот код будет выполнен только после загрузки DOM
+
+  // Получаем все кнопки с классом 'open-events-popup'
   const buttons = document.querySelectorAll('.open-events-popup');
 
   // Получаем сам попап
@@ -1129,25 +1163,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Функция для открытия попапа
   function openPopup() {
-    popup.style.display = 'block';
+    if (popup) {
+      popup.style.display = 'block';
+    } else {
+      console.warn('Popup с id "events-popup2" не найден.');
+    }
   }
 
   // Функция для закрытия попапа
   function closePopup() {
-    popup.style.display = 'none';
+    if (popup) {
+      popup.style.display = 'none';
+    } else {
+      console.warn('Popup с id "events-popup2" не найден.');
+    }
   }
 
   // Добавляем обработчик клика для каждой кнопки
-  buttons.forEach(button => {
-    button.addEventListener('click', openPopup);
-  });
+  if (buttons.length > 0) {
+    buttons.forEach(button => {
+      button.addEventListener('click', openPopup);
+    });
+  } else {
+    console.warn('Кнопки с классом "open-events-popup" не найдены.');
+  }
 
   // Добавляем обработчик клика для кнопки закрытия
-  closeButton.addEventListener('click', closePopup);
+  if (closeButton) {
+    closeButton.addEventListener('click', closePopup);
+  } else {
+    console.warn('Кнопка закрытия с классом "close-button2" не найдена.');
+  }
 
   // Закрытие попапа при клике вне попапа (необязательно, но удобно)
   window.addEventListener('click', function(event) {
-    if (event.target === popup) {
+    if (popup && event.target === popup) {
       closePopup();
     }
   });
