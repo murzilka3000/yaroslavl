@@ -1015,8 +1015,13 @@ function updateTime() {
   const formattedHours = String(hours).padStart(2, '0');
   const formattedMinutes = String(minutes).padStart(2, '0');
 
-  // Update the text in the button
-  document.getElementById("currentTime").innerText = `${formattedHours}:${formattedMinutes}`;
+  // Найти элемент
+  const timeElement = document.getElementById("currentTime");
+
+  // Обновить текст, если элемент найден
+  if (timeElement) {
+    timeElement.innerText = `${formattedHours}:${formattedMinutes}`;
+  }
 }
 
 // Update time every minute
@@ -1058,3 +1063,52 @@ const lapkiContainers = document.querySelectorAll('.home-lapki-cont > div');
 
   window.addEventListener('load', checkVisibility);
   window.addEventListener('scroll', checkVisibility);
+
+
+
+
+
+
+
+  //popup info
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("popup"); // Один попап
+    const triggers = document.querySelectorAll(".popup-info"); // Все кнопки-триггеры
+    const close = popup.querySelector(".close"); // Кнопка закрытия
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener("click", () => {
+            popup.style.display = "flex"; // Открытие попапа
+        });
+    });
+
+    close.addEventListener("click", () => {
+        popup.style.display = "none"; // Закрытие попапа
+    });
+
+    popup.addEventListener("click", (event) => {
+        if (event.target === popup) {
+            popup.style.display = "none"; // Закрытие при клике вне контента
+        }
+    });
+});
+
+
+
+
+
+var acc = document.getElementsByClassName("accordion12");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active12");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
