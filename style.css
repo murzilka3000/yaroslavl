@@ -140,7 +140,7 @@ button {
 :root {
     --font-family: "Jura", sans-serif;
     --second-family: "Tsarevich", sans-serif;
-    --third-family: "Kristi", sans-serif;
+    --third-family: "Jura", sans-serif;
 }
 
 body {
@@ -166,7 +166,7 @@ header {
     left: 0;
     z-index: 2;
     margin: 0 auto;
-    padding: 21px 0;
+    padding: 21px 30px;
 }
 
 header nav ul {
@@ -190,6 +190,23 @@ header nav ul li a {
     text-align: center;
     color: #000;
     text-decoration: none;
+}
+
+.burger {
+    display: none;
+}
+
+
+@media screen and (max-width: 1169px) {
+    header nav {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
 }
 
 /* HEADER END */
@@ -304,7 +321,7 @@ header nav ul li a {
 /* accordion start */
 
 .accordion {
-    padding-top: 853px;
+    padding: 853px 30px 0 30px;
     margin-top: 24px;
 }
 
@@ -384,6 +401,7 @@ header nav ul li a {
 }
 
 .accordion-bottom button {
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 24px;
     text-align: center;
@@ -411,6 +429,100 @@ header nav ul li a {
 
 .school {
     padding-top: 150px!important;
+    line-height: 90%!important;
+}
+
+.art-hero {
+    background: url('./images/hero-art-school.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@media screen and (max-width: 955px) {
+    .accordion-bottom {
+        flex-direction: column;
+    }
+
+    .accordion-bottom > :first-child,
+    .accordion-bottom > :last-child {
+        flex: 1!important;
+    }
+
+    .accordion-bottom iframe {
+        width: 100%!important;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .school {
+        font-size: 100px!important;
+        max-width: 400px;
+        padding-top: 0!important;
+    }
+
+    .school span {
+        font-size: 77px!important;
+    }
+
+    .hero{
+        min-height: 640px;
+    }
+
+    .fly p,
+    .fly p span {
+        font-size: 24px;
+    }
+
+    .fly {
+        padding: 13px 0;
+    }
+
+    .art-hero {
+        background: url('./images/art-hero-mob.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .accordion {
+        padding: 653px 30px 0 30px;
+        margin-top: 24px;
+    }
+
+    .accordion-top h3,
+    .accordion-bottom h6  {
+        font-size: 24px;
+    }
+
+    .accordion-top p,
+    .accordion-bottom p, 
+    .accordion-bottom a {
+        font-size: 16px;
+    }
+
+    .accordion-top {
+        padding: 46px 33px;
+    }
+
+    .accordion-bottom {
+        padding: 20px 14px;
+    }
+
+    .accordion-bottom h6,
+    .accordion-bottom p,
+    .accordion-top p
+      {
+        margin-bottom: 24px;
+    }
+
+    .accordion-top h3 {
+        margin-bottom: 14px;
+    }
+
+
 }
 
 
@@ -1854,6 +1966,10 @@ header nav ul li a {
 
 .home-footer nav ul li a {
     color: #fff;
+}
+
+footer {
+    padding: 0 30px;
 }
 
 /* home end */
