@@ -1188,6 +1188,40 @@ header nav ul li a {
     color: #fff;
 }
 
+.hero-concert-venues {
+    background: url('./images/concert-venues.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.concert-venues-title {
+    color: #fff!important;
+    line-height: 90%!important;
+    padding-top: 120px;
+}
+
+@media screen and (max-width: 778px) {
+    .concert-venues-title {
+        font-size: 98px!important;
+    }
+
+    .dop-text {
+        font-size: 88px!important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero-concert-venues {
+        background: url('./images/bg-mob-1.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
 /* concert-venues end */
 
 
