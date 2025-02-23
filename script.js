@@ -113,6 +113,33 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {
+        1198: {
+          slidesPerView: 3.5,
+          spaceBetween: 10
+        },
+        1022: {
+          slidesPerView: 3,
+          spaceBetween: 10
+        },
+        906: {
+          slidesPerView: 2.5,
+          spaceBetween: 10
+        },
+        682: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        552: {
+          slidesPerView: 1.5,
+          spaceBetween: 10
+        },
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 10
+        },
+        
+      }
     });
   }
 });

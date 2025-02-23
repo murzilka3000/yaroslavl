@@ -1217,6 +1217,7 @@ header nav ul li a {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        padding: 0 30px;
     }
 }
 
@@ -1239,6 +1240,7 @@ header nav ul li a {
 .control-culture-cont {
     display: flex;
     gap: 23px;
+    padding: 0 30px;
 }
 
 .control-culture-cont > :last-child {
@@ -1442,6 +1444,7 @@ header nav ul li a {
     border-radius: 51px;
     overflow: hidden;
     margin: 90px 0;
+    padding: 0 30px;
 }
 
 .map .wrapper {
@@ -1534,6 +1537,168 @@ header nav ul li a {
 
   .accordeon-two {
     margin-bottom: 90px;
+    padding: 0 30px;
+  }
+
+  .control-culture-hero {
+        background: url('./images/control-culture.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0 30px;
+  }
+
+
+  @media screen and (max-width: 1191px) {
+    .culture-2 {
+        flex-direction: column;
+    }
+
+    .culture-title {
+        font-size: 24px;
+    }
+
+    .control-culture-cont > :last-child div  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+  }
+
+  .media-853 {
+    display: none;
+  }
+
+  @media screen and (max-width: 853px) {
+    .text-12{
+        display: none;
+    }
+
+    .media-853 {
+        display: block;
+        width: 65px;
+    }
+
+    .control-culture-cont > :last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .control-culture-cont > :last-child h6 {
+        margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .culture-title,
+    .control-culture-cont > :last-child div p,
+    .control-culture-cont > :last-child h6  {
+        font-size: 16px;
+    }
+
+    .culture-2-2-2,
+    .culture-2-2-1,
+    .culture-2-1,
+    .culture-1 {
+        padding: 17px;
+    }
+
+    .control-culture-title,
+    .control-culture-title span {
+        font-size: 88px!important;
+        line-height: 110%!important;
+    }
+
+    .control-culture-text {
+        font-size: 16px!important;
+    }
+
+    .control-culture-hero {
+        background: url('./images/bg-mob-2.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0 30px;
+  }
+
+    .control-culture {
+        margin-top: 653px;
+        padding-top: 30px;
+        padding-bottom: 24px;
+    }
+
+    .control-culture-cont {
+        display: flex;
+        gap: 5px;
+        padding: 0 20px;
+    }
+
+    .flex {
+        gap: 5px;
+    }
+
+    .culture-2-2 {
+        gap: 23px!important;
+    }
+
+    .swiper-container-cult > .swiper-button-next,
+    .swiper-container-cult > .swiper-button-prev {
+        display: none;
+    }
+
+
+    .swiper-container-cult {
+        overflow-x: hidden!important;
+        
+    }
+
+   
+
+    .swiper-wrapper {
+        z-index: 1000000000000000000!important;
+        position: relative;
+    }
+
+    .map-label {
+        display: none;
+    }
+
+    .block-header  {
+        font-size: 24px;
+    }
+
+    .block-content {
+        font-size: 16px;
+    }
+
+
+    .he-ifr {
+       margin: 24px 0;
+    }
+
+    .map-container-2 {
+        border: 1px solid #000;
+        border-radius: 13px;
+        padding-bottom: 100%;
+    }
+
+    .map-container-2 iframe {
+        height: 100%!important;
+    }
+
+    .open-events-popup {
+        width: 43px;
+    }
+
+  
+
+   
+    
+
   }
 
 /* control-culture end */
@@ -1849,6 +2014,7 @@ header nav ul li a {
 .home-main {
     background: #0e111e;
 }
+
 
 .home-hero {
     padding: 59px 0;
