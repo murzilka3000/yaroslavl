@@ -1229,3 +1229,80 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const swiperContainer = document.querySelector('.swiper-home-slider');
+
+  if (swiperContainer) { 
+    new Swiper(swiperContainer, {
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 12,
+      navigation: {
+        nextEl: '.swiper-button-next1',
+        prevEl: '.swiper-button-prev1',
+      },
+    });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Находим элемент, который открывает попап
+  const openPopupBtn = document.querySelector(".open-events-popup2");
+  
+  // Находим сам попап
+  const popup = document.querySelector(".events-popup");
+  
+  // Находим кнопку закрытия попапа
+  const closePopupBtn = document.querySelector(".close-popup");
+
+  // Открываем попап при клике на кнопку
+  openPopupBtn.addEventListener("click", function() {
+    popup.style.display = "flex"; // Показываем попап
+  });
+
+  // Закрываем попап при клике на кнопку закрытия
+  closePopupBtn.addEventListener("click", function() {
+    popup.style.display = "none"; // Скрываем попап
+  });
+
+  // Закрываем попап, если кликнули по фону попапа (не по контенту)
+  popup.addEventListener("click", function(e) {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+});
